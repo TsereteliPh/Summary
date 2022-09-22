@@ -1,12 +1,175 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
     <title>TsereteliPh</title>
 </head>
-<body>
-    
+<body class="page__body">
+    <header class="header">
+        <h1 class="visually-hidden">Сайт-портфолио разработчика - Церетели Филиппа Прокофьевича</h1>
+
+        <div class="header__wrapper">
+            <p class="header__about">
+                Церетели Филипп<br>
+                <span class="header__prof">
+                    Верстальщик/Junior Frontend Dev
+                </span>
+            </p>
+
+            <div class="header__socials social">
+                <a href="https://t.me/TsereteliPh" class="social__link social__link--telegram" target="_blank"><span class="visually-hidden">Telegram</span></a>
+
+                <a href="https://github.com/TsereteliPh" class="social__link social__link--github" target="_blank"><span class="visually-hidden">Github</span></a>
+
+                <a href="https://vk.com/tsereteliph" class="social__link social__link--vk" target="_blank"><span class="visually-hidden">Вконтакте</span></a>
+
+                <a href="https://www.instagram.com/tsereteli.ph" class="social__link social__link--inst" target="_blank"><span class="visually-hidden">Instagram</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page__main">
+        <section class="hello">
+            <div class="hello__wrapper">
+                <img class="hello__image" src="#" alt="Моя фотография">
+            </div>
+
+            <div class="hello__info info">
+                <p class="info__hi">Приветствую!</p>
+
+                <p class="info__who">
+                    Я - <span class="info__name">Церетели Филипп</span>
+                </p>
+
+                <table class="info__table table">
+                    <tr>
+                        <td class="table__first-column">Возраст</td>
+                        <td class="table__second-column">24</td>
+                    </tr>
+
+                    <tr>
+                        <td class="table__first-column">Город</td>
+                        <td class="table__second-column">Санкт-Петербург</td>
+                    </tr>
+
+                    <tr>
+                        <td class="table__first-column">Email</td>
+                        <td class="table__second-column"><a href="mailto:filipptsereteli@yandex.ru">filipptsereteli@yandex.ru</a></td>
+                    </tr>
+
+                    <tr>
+                        <td class="table__first-column">Телефон</td>
+                        <td class="table__second-column"><a href="tel:+79516851166">+7-951-685-11-66</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2 class="caption about__caption">Обо мне</h1>
+
+            <div class="about__wrapper">
+                <p class="about__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatum sit odio, expedita veritatis unde facilis asperiores deserunt perferendis animi! Deserunt sunt nulla, voluptas tempora a debitis voluptatum voluptate repudiandae?
+                </p>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2 class="caption skills__caption">Навыки</h2>
+
+            <div class="skills__wrapper">
+                <div class="skills__professional professional">
+                    <div class="professional__text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ipsam quod, non magnam voluptatem exercitationem ipsum repellat minima rerum accusantium distinctio, delectus aspernatur assumenda! Ex voluptates totam rem voluptatem libero?
+                    </div>
+
+                    <div class="professional__percents">
+
+                    </div>
+                </div>
+
+                <div class="skills__personal personal">
+                    <div class="personal__text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero ea voluptatum impedit laudantium reprehenderit minus quae autem asperiores enim! Saepe cupiditate sed provident animi in accusantium quo ducimus voluptas officia.
+                    </div>
+
+                    <div class="personal__percents">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feedback">
+            <h2 class="caption feedback__caption">
+                Хотите пригласить на интервью?<br>
+                Достаточно заполнить форму:
+            </h2>
+
+            <div class="feedback__wrapper">
+                <form class="feedback__form form" action="#">
+                    <div class="form__name">
+                        <label for="name" class="form__label">Ваше имя:</label>
+
+                        <input class="input form__name-input" id="name" type="text" name="name" placeholder="Введите имя *" required>
+                    </div>
+
+                    <div class="form__company">
+                        <label for="company-name" class="form__label">Название компании:</label>
+
+                        <input class="input form__company-input" id="company-name" type="text" name="company-name" placeholder="Google *" required>
+                    </div>
+
+                    <div class="form__email">
+                        <label for="email" class="form__label">Почта:</label>
+
+                        <input class="input form__email-input" id="email" type="email" name="email" placeholder="example@mail.ru">
+                    </div>
+
+                    <div class="form__phone">
+                        <label for="phone" class="form__label">Телефон:</label>
+
+                        <input class="input form__input" id="phone"  type="tel" name="phone" placeholder="+7-(999)-999-99-99 *" required>
+                    </div>
+
+                    <div class="form__message">
+                        <label for="message" class="form__label">Дополнительная информация:</label>
+
+                        <textarea class="input form__textarea" id="message" name="message"></textarea>
+                    </div>
+
+                    <div class="form__submit send-panel">
+                        <div class="send-panel__buttons">
+                            <button type="submit">Отправить</button>
+
+                            <button type="reset">Отмена</button>
+                        </div>
+
+                        <p class="send-panel__notice">
+                            <span>*</span>
+                            - обязательны для заполнения.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__socials social">
+            <a href="https://t.me/TsereteliPh" class="social__link social__link--telegram" target="_blank"><span class="visually-hidden">Telegram</span></a>
+
+            <a href="https://github.com/TsereteliPh" class="social__link social__link--github" target="_blank"><span class="visually-hidden">Github</span></a>
+
+            <a href="https://vk.com/tsereteliph" class="social__link social__link--vk" target="_blank"><span class="visually-hidden">Вконтакте</span></a>
+
+            <a href="https://www.instagram.com/tsereteli.ph" class="social__link social__link--inst" target="_blank"><span class="visually-hidden">Instagram</span></a>
+        </div>
+    </footer>
 </body>
 </html>
