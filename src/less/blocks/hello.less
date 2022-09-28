@@ -1,0 +1,135 @@
+.hello {
+    @media (min-width: @tablet-width) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+}
+
+.hello__wrapper {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+
+    margin: 0 auto 20px;
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+        max-width: 500px;
+    }
+}
+
+.hello__image {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.info {
+    @media (min-width: @tablet-width) {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    @media (min-width: @desktop-width) {
+        max-width: 500px;
+    }
+}
+
+.info__hi {
+    width: 150px;
+    height: 40px;
+    margin: 0 auto 10px;
+    
+    line-height: 40px;
+    text-align: center;
+
+    box-shadow: @shadow;
+    border-radius: 1rem;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 220px;
+        height: 50px;
+        margin-bottom: 30px;
+
+        line-height: 47px;
+    }
+}
+
+.info__who {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    text-align: center;
+
+    border-bottom: 1px solid @greyLight-2;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-bottom: 25px;
+    }
+}
+
+.info__name {
+    font-weight: 700;
+    color: @primary;
+}
+
+.table {
+    margin: 0 auto;
+    font-size: 1em;
+
+    & tr {
+        height: 25px;
+
+        @media (min-width: @tablet-width) {
+            height: 35px;
+        }
+
+        @media (min-width: @tablet-width) {
+            height: 45px;
+        }
+    }
+}
+
+.table__first-column {
+    font-weight: 700;
+}
+
+.table__second-column {
+    padding-left: 15px;
+
+    @media (min-width: @tablet-width) {
+        padding-left: 25px;
+    }
+}
+
+.table__link {
+    color: @greyDark;
+
+    &:hover {
+        color: @primary;
+        text-decoration: none;
+
+        transition: all 0.5s ease;
+    }
+
+    &:active {
+        color: @greyLight-3;
+    }
+}
