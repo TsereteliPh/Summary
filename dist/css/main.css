@@ -1,3 +1,57 @@
+@-webkit-keyframes tooltip-show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+@keyframes tooltip-show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+@-webkit-keyframes tooltip-pointer-show {
+  0% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(45deg) translate(0);
+  }
+}
+@keyframes tooltip-pointer-show {
+  0% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(45deg) translate(0);
+  }
+}
+@-webkit-keyframes tooltip-hide {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    scale: 0;
+    visibility: hidden;
+  }
+}
+@keyframes tooltip-hide {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    scale: 0;
+    visibility: hidden;
+  }
+}
 @font-face {
   font-family: 'Montserrat';
   src: url(../fonts/montserrat-regular.woff2), url(../fonts/montserrat-regular.woff);
@@ -315,6 +369,15 @@
   border-radius: 1rem;
   box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #ffffff;
 }
+.skills__level-container:hover .skills__scale::before {
+  visibility: visible;
+  -webkit-animation: tooltip-show 0.2s ease-in;
+          animation: tooltip-show 0.2s ease-in;
+}
+.skills__level-container:hover .skills__scale::after {
+  -webkit-animation: tooltip-pointer-show 0.2s ease-in 0.2s forwards;
+          animation: tooltip-pointer-show 0.2s ease-in 0.2s forwards;
+}
 .skills__scale {
   position: relative;
   display: block;
@@ -338,4 +401,40 @@
 }
 .skills__scale.skills__scale--git {
   width: 20%;
+}
+.skills__scale::before {
+  content: attr(data-value);
+  position: absolute;
+  top: -3.5rem;
+  left: 50%;
+  width: 5rem;
+  height: 2rem;
+  margin-left: -2.5rem;
+  font: inherit;
+  text-align: center;
+  line-height: 32px;
+  color: #9baacf;
+  border-radius: 0.5rem;
+  background-color: #6d5dfc;
+  box-shadow: 2px 2px 10px #6d5dfc;
+  z-index: 2;
+  -webkit-animation: tooltip-hide 0.2s ease-out;
+          animation: tooltip-hide 0.2s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.skills__scale::after {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -0.5rem;
+  background-color: #6d5dfc;
+  box-shadow: 2px 2px 10px #6d5dfc;
+  visibility: hidden;
+  z-index: 0;
+  -webkit-animation: tooltip-hide 0.2s ease-out;
+          animation: tooltip-hide 0.2s ease-out;
 }
