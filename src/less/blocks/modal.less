@@ -1,0 +1,108 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: blur(5px);
+    
+    z-index: 2;
+}
+
+.modal--success {
+    display: none;
+}
+
+.modal--failure {
+    display: none;
+}
+
+.modal--active {
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.modal__wrapper {
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    border-radius: 1rem;
+    background-color: @greyLight-1;
+    box-shadow: 0.5rem 0.5rem 0.5rem @greyLight-2, 
+                -0.5rem -0.5rem 0.5rem @greyLight-2;
+
+    animation: modal-show 0.3s ease-in;
+
+    @media (min-width: @tablet-width) {
+        max-width: 650px;
+    }
+
+    @media (min-width: @desktop-width) {
+        max-width: 900px;
+    }
+}
+
+.modal__caption {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
+
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.modal__message {
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
+
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 2rem;
+    }
+}
+
+.modal__button {
+    width: 200px;
+    max-width: none;
+    margin: 0 auto 2rem;
+
+    background-color: @primary;
+    box-shadow: inset 0.2rem 0.2rem 1rem @primary-light, 
+                inset -0.2rem -0.2rem 1rem @primary-dark,
+                @shadow;
+    color: fade(@greyLight-1, 50);
+
+    &:hover { 
+        color: @greyLight-1; 
+    }
+
+    &:active {
+        box-shadow: inset 0.2rem 0.2rem 1rem @primary-dark, 
+                    inset -0.2rem -0.2rem 1rem @primary-light;
+    }
+
+    @media (min-width: @tablet-width) {
+        width: 260px;
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
