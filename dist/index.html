@@ -153,7 +153,7 @@
             </h2>
 
             <div class="container feedback__wrapper">
-                <form class="feedback__form form" action="#">
+                <form class="feedback__form form">
                     <div class="form__name">
                         <label for="name" class="form__label">Ваше имя:</label>
 
@@ -161,9 +161,9 @@
                     </div>
 
                     <div class="form__company">
-                        <label for="company-name" class="form__label">Название компании:</label>
+                        <label for="company_name" class="form__label">Название компании:</label>
 
-                        <input class="input form__company-input" id="company-name" type="text" name="company-name" placeholder="Google" required>
+                        <input class="input form__company-input" id="company_name" type="text" name="company_name" placeholder="Google" required>
                     </div>
 
                     <div class="form__email">
@@ -175,7 +175,7 @@
                     <div class="form__phone">
                         <label for="phone" class="form__label">Телефон:</label>
 
-                        <input class="input form__input" id="phone"  type="tel" name="phone" placeholder="+7-(999)-999-99-99" required>
+                        <input class="input form__input" id="phone" type="tel" name="phone" placeholder="+7-(999)-999-99-99" pattern="\+[0-9]{11}" required>
                     </div>
 
                     <div class="form__message">
@@ -247,6 +247,7 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/form.min.js"></script>
 </body>
 </html>
