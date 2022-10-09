@@ -783,10 +783,7 @@
   background-color: #6d5dfc;
   box-shadow: 2px 2px 10px #6d5dfc;
   z-index: 2;
-  -webkit-animation: tooltip-hide 0.2s ease-out;
-          animation: tooltip-hide 0.2s ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  visibility: hidden;
 }
 .skills__scale::after {
   content: "";

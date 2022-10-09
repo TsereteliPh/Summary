@@ -117,17 +117,15 @@ const URI_API = ` https://api.telegram.org/bot${ token }/sendMessage`;
 form.addEventListener('submit', function(evt) {
     evt.preventDefault();
 
-    let formMessage = `<b>Отклик с сайта!</b>\n
-                       <b>Отправитель: </b> ${ this.name.value }\n <b>Компания: </b> ${ this.company_name.value }\n <b>Email: </b> ${ this.email.value }\n <b>Телефон: </b> ${ this.phone.value }\n <b>Дополнительная информация: </b> ${ this.message.value }\n`;
+    let formMessage = `<b>Отклик с сайта!</b>\n <b>Отправитель: </b> ${ this.name.value }\n <b>Компания: </b> ${ this.company_name.value }\n <b>Email: </b> ${ this.email.value }\n <b>Телефон: </b> ${ this.phone.value }\n <b>Дополнительная информация: </b> ${ this.message.value }\n`;
     
-    axios.post(URI_API, {
-        chat_id: chatId,
-        text: formMessage,
-        parse_mode: 'html'
-    });
-    
-    //Условия открытия модальных окон
     if (inputSubmitChecker()) {
+        axios.post(URI_API, {
+            chat_id: chatId,
+            text: formMessage,
+            parse_mode: 'html'
+        });
+
         resetForm(form);
 
         modalSuccess.classList.add('modal--active');
