@@ -117,18 +117,19 @@ const URI_API = ` https://api.telegram.org/bot${ token }/sendMessage`;
 form.addEventListener('submit', function(evt) {
     evt.preventDefault();
 
-    let formMessage = `<b>Отклик с сайта!</b>\n`;
-    formMessage += `<b>Отправитель: </b> ${ this.name.value }\n`;
-    formMessage += `<b>Компания: </b> ${ this.company_name.value }\n`;
-    formMessage += `<b>Email: </b> ${ this.email.value }\n`
-    formMessage += `<b>Телефон: </b> ${ this.phone.value }\n`
-    formMessage += `<b>Дополнительная информация: </b> ${ this.message.value }\n`;
+    let formMessage = `*Отклик с сайта!*  `;
+    // <b>Отправитель: </b> ${ this.name.value }\n<b>Компания: </b> ${ this.company_name.value }\n<b>Email: </b> ${ this.email.value }\n<b>Телефон: </b> ${ this.phone.value }\n<b>Дополнительная информация: </b> ${ this.message.value }\n`;
+    formMessage += `*Отправитель: * ${ this.name.value }  `;
+    formMessage += `*Компания: * ${ this.company_name.value }  `;
+    formMessage += `*Email: * ${ this.email.value }  `
+    formMessage += `*Телефон: * ${ this.phone.value }  `
+    formMessage += `*Дополнительная информация: * ${ this.message.value }  `;
     
     if (inputSubmitChecker()) {
         axios.post(URI_API, {
             chat_id: chatId,
             text: formMessage,
-            parse_mode: 'html'
+            parse_mode: 'markdown'
         });
 
         resetForm(form);
