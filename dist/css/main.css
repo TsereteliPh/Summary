@@ -270,7 +270,7 @@
   transition: all 0.5s ease;
 }
 .about__text {
-  text-align: center;
+  text-align: justify;
 }
 @media (min-width: 1200px) {
   .about__text {
@@ -766,7 +766,7 @@
   width: 30%;
 }
 .skills__scale.skills__scale--php {
-  width: 15%;
+  width: 25%;
 }
 .skills__scale.skills__scale--git {
   width: 20%;
